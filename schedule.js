@@ -9,11 +9,11 @@ const getRandomSubject = () => {
 
 const generateSchedule = (students) => {
   students.forEach((student) => {
-    const schedule = [];
+    const studentSchedule = [];
     for (let i = 0; i < 5; i = studentSchedule.length) {
       const subject = getRandomSubject();
       if (!studentSchedule.includes(subject)) {
-        studnetSchedule.push(subject);
+        studentSchedule.push(subject);
       }
     }
     student.schedule = studentSchedule;

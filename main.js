@@ -1,4 +1,4 @@
-const { enrollStudents } = require("./Students.js");
+const { enrollStudents } = require("./students.js");
 const { hireProfessors } = require("./professors.js");
 const { generateSchedule } = require("./schedule.js");
 const { getSortedHouses } = require("./sortingHat.js");
@@ -8,7 +8,7 @@ const { getSubjects } = require("./database.js");
 const studentsToEnroll = 40;
 const professors = hireProfessors(studentsToEnroll);
 const students = enrollStudents(studentsToEnroll);
-const sortedHouses = getSortedHouses();
+const sortedHouses = getSortedHouses(students);
 const classSchedule = getSubjects();
 
 // Assign houses and generate student schedules

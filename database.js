@@ -45,7 +45,7 @@ const database = {
     { firstName: "Albus", lastName: "Dumbledore" },
     { firstName: "Minerva", lastName: "McGonagall" },
     { firstName: "Severus", lastName: "Snape" },
-    { firstname: "Remus", lastName: "Lupin" },
+    { firstName: "Remus", lastName: "Lupin" },
     { firstName: "Pomona", lastName: "Sprout" },
     { firstName: "Filius", lastName: "Flitwick" },
     { firstName: "Horace", lastName: "Slughorn" },
@@ -53,7 +53,7 @@ const database = {
     { firstName: "Rubeus", lasName: "Hagrid" },
     { firstName: "Gilderoy", lastName: "Lockhart" },
   ],
-  house: ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"],
+  houses: ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"],
   subjects: [
     "Potions",
     "Transfiguration",
@@ -67,12 +67,15 @@ const database = {
 };
 
 const getStudents = (number) => {
-  return database.studentNames.slice(0, number).map((names) => ({ name }));
+  return database.studentNames.slice(0, number).map((name) => ({ name }));
 };
+
 const getProfessors = (number) => {
-  return database.professorName.slice(0, number);
+  return database.professorNames.slice(0, number);
 };
 
 const getHouses = () => structuredClone(database.houses);
 
-module.exports = { getStudents, getProfessors, getHouses, getSubject };
+const getSubjects = () => database.subjects;
+
+module.exports = { getStudents, getProfessors, getHouses, getSubjects };

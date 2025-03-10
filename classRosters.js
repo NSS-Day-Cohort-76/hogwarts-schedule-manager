@@ -2,11 +2,11 @@ const { getSubjects } = require("./database");
 
 const subjects = getSubjects();
 
-const createClassRoosters = (students) => {
+const createClassRosters = (students) => {
   const rosters = {};
 
   subjects.forEach((subject) => {
-    rosters.subject = [];
+    rosters[subject] = [];
   });
 
   students.forEach((student) => {
@@ -15,7 +15,7 @@ const createClassRoosters = (students) => {
     });
   });
 
-  return roster;
+  return rosters;
 };
 
 module.exports = { createClassRosters };
